@@ -1,0 +1,40 @@
+{
+  "adversarial_cli_and_read_only_cases_in_tests": 22,
+  "all_expected_outcomes_verified": true,
+  "commands": [
+    {
+      "actual_exit": 0,
+      "command": "python3 tool.py examples/pass.ini",
+      "expected_exit": 0,
+      "output_sha256": "6eb1c1061b81add26a352e4b378a18858571cb0679a447177abac6926eee9d35",
+      "status": "pass"
+    },
+    {
+      "actual_exit": 1,
+      "command": "python3 tool.py examples/fail.ini",
+      "expected_exit": 1,
+      "output_sha256": "4e98c8d02cbb8cfd8c235d54674782c05021b454a6259e6af3df30bf43f9de84",
+      "status": "fail"
+    },
+    {
+      "actual_exit": 2,
+      "command": "python3 tool.py examples/malformed.ini",
+      "expected_exit": 2,
+      "output_sha256": "71fb76a9ed4ec208acd2fac9c254fb6f666a8e41d20cae9a93fb4c4aa297f930",
+      "status": "error"
+    },
+    {
+      "actual_exit": 0,
+      "command": "python3 tool.py --help",
+      "expected_exit": 0
+    },
+    {
+      "actual_exit": 0,
+      "command": "python3 -m unittest -v test_tool.py",
+      "expected_exit": 0,
+      "test_count": 25
+    }
+  ],
+  "reverified_date": "2026-10-09",
+  "runtime": "3.12.14"
+}

@@ -1,0 +1,154 @@
+{
+  "schema_version": 1,
+  "slug": "ini-section-collision-audit",
+  "domain": "data",
+  "guidance_group": "light",
+  "source_commit": "1286096c10a23bbb04aca83679ae3c31f3326030",
+  "source_repository": "mytestapp20261001-collab/mytest-engineering-toolbox",
+  "source_repository_id": 1411411288,
+  "source_path": "tools/ini-section-collision-audit",
+  "root_path": ".",
+  "publication_status": "prepared_only; coordinator verifies final repository identity and remote CI",
+  "expected_repository": "mytestapp20261001-collab/ini-section-collision-audit",
+  "repository_id": null,
+  "preserved_files": [
+    {
+      "path": "README.md",
+      "size_bytes": 4711,
+      "sha256": "be604630bd2eabdc473bf07c30e3f5ba6d4bb6d6b6a90accedf16b42a2596172",
+      "git_blob_sha1": "40fab6a309a937b347425c359bbc0fb7327d8660",
+      "utf8": true,
+      "source_path": "tools/ini-section-collision-audit/README.md"
+    },
+    {
+      "path": "SKILL.md",
+      "size_bytes": 4107,
+      "sha256": "765f3117e6fce051328adfbe4b321f5f919e1261961ea4541bc3d2a04a34f633",
+      "git_blob_sha1": "70484b049aae7a2a02183ce4933f4005643a7d4b",
+      "utf8": true,
+      "source_path": "tools/ini-section-collision-audit/SKILL.md"
+    },
+    {
+      "path": "examples/fail.ini",
+      "size_bytes": 61,
+      "sha256": "8b177a195f20e889403b70b322bb7c89b2cc10be8a08d85bf1103c852aa0cb3c",
+      "git_blob_sha1": "b5e4cc5e6f8ba9da7a42173d8cc97af76180a8e5",
+      "utf8": true,
+      "source_path": "tools/ini-section-collision-audit/examples/fail.ini"
+    },
+    {
+      "path": "examples/malformed.ini",
+      "size_bytes": 16,
+      "sha256": "b4a0133aafb269fae4c305ca7a527e1ef3be440c59bd82f0259686e362f9a818",
+      "git_blob_sha1": "c80e073ccf27f3965914e46fe35f81b91a2c004f",
+      "utf8": true,
+      "source_path": "tools/ini-section-collision-audit/examples/malformed.ini"
+    },
+    {
+      "path": "examples/pass.ini",
+      "size_bytes": 39,
+      "sha256": "27547b5ce02a0ab21643f1e09fee5ddea940ffa042ea98a70fa5788ff18bea04",
+      "git_blob_sha1": "c12981500458ebc0ef5f430afff298122ecade47",
+      "utf8": true,
+      "source_path": "tools/ini-section-collision-audit/examples/pass.ini"
+    },
+    {
+      "path": "test_tool.py",
+      "size_bytes": 7068,
+      "sha256": "32c570c66450a62155dc6a025e416e4f9dff0d43b6a60114c92c7941a5e3acea",
+      "git_blob_sha1": "c602103261799dcba55b18a519e41fc30bdafca0",
+      "utf8": true,
+      "source_path": "tools/ini-section-collision-audit/test_tool.py"
+    },
+    {
+      "path": "tool.py",
+      "size_bytes": 5787,
+      "sha256": "33775818507ab75a505ba893d073e1d3476cba1462fd03e8becc24e308065f21",
+      "git_blob_sha1": "7f6f1202212228ce09574bbf766fab37546b20d9",
+      "utf8": true,
+      "source_path": "tools/ini-section-collision-audit/tool.py"
+    },
+    {
+      "path": "verification.json",
+      "size_bytes": 1124,
+      "sha256": "de3260dc33132b8629d49539a30c52f04b198b06b9c06799b9a2b1a17037f991",
+      "git_blob_sha1": "7713ff2e7c452ff1bf7ec79bd1669a51251a1a67",
+      "utf8": true,
+      "source_path": "tools/ini-section-collision-audit/verification.json"
+    },
+    {
+      "path": "LICENSE",
+      "size_bytes": 1076,
+      "sha256": "dce76471613629e93f3f98b7aaa6f72ff9adb88204a3f83d3045952017ab2f46",
+      "git_blob_sha1": "677c4463d59b560db9c1fde1052eff6eefa6441a",
+      "utf8": true,
+      "source_path": "LICENSE"
+    },
+    {
+      "path": ".gitignore",
+      "size_bytes": 62,
+      "sha256": "e4d5aecc4cd36f593c2e7f3dad08b24261b13466b898004a445614058d29d8de",
+      "git_blob_sha1": "fe9f8fb619601213cbfef4f6eadb5d413d8f7f01",
+      "utf8": true,
+      "source_path": ".gitignore"
+    }
+  ],
+  "readme_checks": [
+    {
+      "label": "README example",
+      "args": [
+        "tool.py",
+        "examples/pass.ini"
+      ],
+      "expected_exit": 0,
+      "output": "json",
+      "documented_command": "python3 tool.py examples/pass.ini"
+    },
+    {
+      "label": "README example",
+      "args": [
+        "tool.py",
+        "examples/fail.ini"
+      ],
+      "expected_exit": 1,
+      "output": "json",
+      "documented_command": "python3 tool.py examples/fail.ini"
+    },
+    {
+      "label": "README example",
+      "args": [
+        "tool.py",
+        "examples/malformed.ini"
+      ],
+      "expected_exit": 2,
+      "output": "json",
+      "documented_command": "python3 tool.py examples/malformed.ini"
+    },
+    {
+      "label": "CLI help",
+      "args": [
+        "tool.py",
+        "--help"
+      ],
+      "expected_exit": 0,
+      "output": "help"
+    },
+    {
+      "label": "CLI missing input",
+      "args": [
+        "tool.py"
+      ],
+      "expected_exit": 2,
+      "output": "json"
+    },
+    {
+      "label": "CLI unknown argument",
+      "args": [
+        "tool.py",
+        "--unsupported-migration-test"
+      ],
+      "expected_exit": 2,
+      "output": "json"
+    }
+  ]
+}
